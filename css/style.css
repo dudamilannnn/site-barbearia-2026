@@ -1,0 +1,656 @@
+/* style.css -- sempre comece assim */
+:root {
+    /* Cores */
+    --black: #111111;
+    --graphite: #1a1a1a;
+    --gold: #c8a35f;
+    --white: #f5f5f5;
+    --gray: #9b9b9b;
+    /* Tipografia */
+
+    /* Espaçamento */
+
+    /* Outros */
+    --container: 1200px;
+    --transition: 0.3s ease;
+}
+
+/* BASE */
+
+body {
+    font-family: "Inter", sans-serif;
+    background: var(--black);
+    color: var(--white);
+}
+
+.container {
+    width: 90%;
+    max-width: var(--container);
+    margin: 0 auto;
+}
+
+section {
+    padding: 100px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-title h2 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 3rem;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.section-title p {
+    color: var(gray);
+}
+
+/* HEADER */
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(17, 17, 17, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+.logo {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    color: var(--gold);
+}
+
+.nav ul {
+    display: flex;
+    gap: 30px;
+}
+
+.nav a {
+    position: relative;
+    transition: var(--transition);
+}
+
+.nav a:hover {
+    color: var(--gold);
+}
+
+.nav::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 2px;
+    background: var(--gold);
+    transition: var(--transition);
+}
+
+.nav a:hover::after {
+    width: 100%;
+}
+
+/* HERO */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    background-image: url("https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&w=1600&q=80");
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.72);
+}
+
+.hero-content {
+    position: relative;
+    max-width: 800px;
+    padding: 20px;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 6rem;
+    line-height: 1;
+    margin-bottom: 25px;
+    letter-spacing: 3px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #d9d9d9;
+    margin-bottom: 35px;
+}
+
+/* BOTÕES */
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 30px;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.btn-primary {
+    background: var(--gold);
+    color: var(--black);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(200, 163, 95, .25);
+}
+
+.btn-secondary {
+    border: 1px solid var(--gold);
+    color: var(--gold);
+}
+
+.btn-secondary:hover {
+    background: var(--gold);
+    color: var(--black);
+}
+
+/* SOBRE */
+
+.sobre {
+    background: var(--graphite);
+}
+
+.sobre-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.sobre img {
+    border-radius: 12px;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sobre h2 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.sobre p {
+    color: #d5d5d5;
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+/* SERVIÇOS */
+
+.servicos {
+    background: var(--black);
+}
+
+.servicos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.card-servico {
+    background: #202020;
+    padding: 35px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: var(--transition);
+}
+
+.card-servico:hover {
+    transform: translateY(-8px);
+    border-color: var(--gold);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .35);
+}
+
+.card-servico h3 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 2rem;
+    color: var(--gold);
+    margin-bottom: 18px;
+    letter-spacing: 1px;
+}
+
+.card-servico p {
+    color: #d6d6d6;
+    line-height: 1.7;
+    margin-bottom: 18px;
+}
+
+.card-servico span {
+    display: block;
+    color: var(--gray);
+    margin-bottom: 12px;
+}
+
+.card-servico strong {
+    display: block;
+    color: var(--gold);
+    font-size: 1.2rem;
+}
+
+/* GALERIA */
+
+.galeria {
+    background: var(--graphite);
+}
+
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+.galeria-grid img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: var(--transition);
+}
+
+.galeria-grid img:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+/* DEPOIMENTOS */
+
+.depoimentos {
+    background: var(--black);
+}
+
+.carousel {
+    position: relative;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.depoimento {
+    display: none;
+    text-align: center;
+    animation: fade .5s ease;
+}
+
+.depoimento.ativo {
+    display: block;
+}
+
+.depoimento p {
+    font-size: 1.2rem;
+    line-height: 2;
+    color: #e7e7e7;
+    margin-bottom: 25px;
+    font-style: italic;
+}
+
+.depoimento h4 {
+    color: var(--gold);
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
+/* FAQ */
+
+.faq {
+    background: var(--graphite);
+}
+
+.faq-item {
+    max-width: 900px;
+    margin: 20px auto;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.faq-question {
+    width: 100%;
+    padding: 22px 28px;
+    background: #202020;
+    color: var(--white);
+    text-align: left;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.faq-question:hover {
+    background: #2b2b2b;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    background: #181818;
+    color: #d8d8d8;
+    line-height: 1.8;
+    padding: 0 28px;
+    transition: max-height .4s ease, padding .4s ease;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 250px;
+    padding: 22px 28px;
+}
+
+.faq-item.active .faq-question {
+    color: var(--gold);
+}
+
+/* AGENDAMENTO */
+
+.agendamento {
+    background: var(--black);
+}
+
+.booking-form {
+    max-width: 700px;
+    margin: 0 auto;
+    background: #1b1b1b;
+    padding: 40px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--white);
+}
+
+.form-group input, .form-group select {
+    padding: 14px 16px;
+    background: #262626;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    color: var(--white);
+    transition: var(--transition);
+}
+
+.form-group input:focus, .form-group select:focus {
+    border-color: var(--gold);
+    outline: none;
+}
+
+.booking-form button {
+    width: 100%;
+}
+
+/* CONTATO */
+
+.contato {
+    background: var(--graphite);
+}
+
+.contato-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 30px;
+}
+
+.contato-card {
+    background: #202020;
+    padding: 35px;
+    border-radius: 10px;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.contato-card:hover {
+    transform: translateY(-6px);
+    border: 1px solid var(--gold);
+}
+
+.contato-card h3 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 2rem;
+    color: var(--gold);
+    margin-bottom: 15px;
+}
+
+.contato-card p {
+    color: #d5d5d5;
+    line-height: 1.8;
+}
+
+/* FOOTER */
+
+.footer {
+    background: #0d0d0d;
+    padding: 30px 0;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer p {
+    color: #bfbfbf;
+    font-size: .95rem;
+}
+
+/* BOTÃO WHATSAPP */
+
+.whatsapp-float {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background: #25d366;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: .8rem;
+    font-weight: 700;
+    text-align: center;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, .35);
+    transition: var(--transition);
+    z-index: 999;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.08);
+}
+
+/* BOTÃO VOLTAR AO TOPO */
+
+.back-to-top {
+    position: fixed;
+    left: 25px;
+    bottom: 25px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--gold);
+    color: var(--black);
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s;
+    z-index: 999;
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    transform: translateY(-5px);
+}
+
+/* ==========================================
+   SCROLLBAR
+========================================== */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #111;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gold);
+  border-radius: 30px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #d9b16a;
+}
+
+/* ==========================================
+   RESPONSIVIDADE
+========================================== */
+
+@media (max-width: 992px) {
+
+  .sobre-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 4.5rem;
+  }
+
+  .header .container {
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    height: auto;
+    padding: 20px 0;
+  }
+
+}
+
+@media (max-width:768px){
+
+  section{
+    padding:70px 0;
+  }
+
+  .hero{
+    padding:140px 20px 80px;
+  }
+
+  .hero h1{
+    font-size:3.2rem;
+  }
+
+  .hero p{
+    font-size:1rem;
+  }
+
+  .nav ul{
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:15px;
+  }
+
+  .section-title h2{
+    font-size:2.5rem;
+  }
+
+  .booking-form{
+    padding:30px;
+  }
+
+}
+
+@media (max-width:480px){
+
+  .hero h1{
+    font-size:2.6rem;
+  }
+
+  .hero-buttons{
+    flex-direction:column;
+  }
+
+  .btn{
+    width:100%;
+    text-align:center;
+  }
+
+  .booking-form{
+    padding:20px;
+  }
+
+  .card-servico,
+  .contato-card{
+    padding:25px;
+  }
+
+  .whatsapp-float{
+    width:58px;
+    height:58px;
+    right:18px;
+    bottom:18px;
+  }
+
+  .back-to-top{
+    left:18px;
+    bottom:18px;
+  }
+
+}
