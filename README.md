@@ -35,7 +35,7 @@ Neste projeto pratiquei a criação de uma landing page completa utilizando HTML
 ## Como rodar localmente
 1. Clone o respositório
 ```bash
-git clone https://github.com/dudamilannnn/siste-barbearia-2026
+git clone https://github.com/dudamilannnn/site-barbearia-2026
 ```
 2. Abra o arquivo index.html no navegador
 
