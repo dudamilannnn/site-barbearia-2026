@@ -5,7 +5,7 @@ O Barber Prime é um site institucional desenvolvido para uma barbearia fictíci
 
 ## Preview
 ![Preview do projeto](assets/img/preview.png)
--- ou -- [Ver projeto ao vivo](https://seulink.github.io/nome-do-projeto)
+-- ou -- [Ver projeto ao vivo](https://dudamilannnn.github.io/site-barbearia-2026/)
 
 ## Tecnologias utilizadas
 - HTML5
@@ -35,10 +35,9 @@ Neste projeto pratiquei a criação de uma landing page completa utilizando HTML
 ## Como rodar localmente
 1. Clone o respositório
 ```bash
-git clone https://github.com/seuusuario/nome-do-projeto
+git clone https://github.com/dudamilannnn/siste-barbearia-2026
 ```
 2. Abra o arquivo index.html no navegador
 
 ## Autora
 Maria Eduarda Milan - Desenvolvedora Web
-[LinkedIn](link) - [Instagram](link) - [Portfólio](link)
